@@ -1,12 +1,10 @@
 package edu.eci.arcn.fizzbuzz;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * Unit tests for FizzBuzz.java file following TDD (Red-Green-Refactor) cycle.
+ * Unit tests for this.java file following TDD (Red-Green-Refactor) cycle.
  *
  * Methodology: Tests are written BEFORE the implementation.
  * Each test drives the minimum necessary production code.
@@ -17,10 +15,7 @@ import org.junit.jupiter.api.Test;
  */
 class FizzBuzzTest {
 
-    @BeforeEach
-    void setUp() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-    }
+    private final FizzBuzz fizzBuzz = new FizzBuzz();
 
     @Test
     void testFizzBuzzShouldReturnNumberFor1() {
@@ -28,7 +23,7 @@ class FizzBuzzTest {
         int input = 1;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("1", result);
@@ -40,7 +35,7 @@ class FizzBuzzTest {
         int input = 2;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("2", result);
@@ -52,7 +47,7 @@ class FizzBuzzTest {
         int input = 7;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("7", result);
@@ -64,7 +59,7 @@ class FizzBuzzTest {
         int input = 3;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("Fizz", result);
@@ -76,7 +71,7 @@ class FizzBuzzTest {
         int input = 9;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("Fizz", result);
@@ -88,7 +83,7 @@ class FizzBuzzTest {
         int input = 4;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("4", result);
@@ -100,7 +95,7 @@ class FizzBuzzTest {
         int input = 5;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("Buzz", result);
@@ -112,7 +107,7 @@ class FizzBuzzTest {
         int input = 25;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("Buzz", result);
@@ -124,7 +119,7 @@ class FizzBuzzTest {
         int input = 7;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("7", result);
@@ -136,7 +131,7 @@ class FizzBuzzTest {
         int input = 15;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("FizzBuzz", result);
@@ -148,7 +143,7 @@ class FizzBuzzTest {
         int input = 30;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("FizzBuzz", result);
@@ -160,7 +155,7 @@ class FizzBuzzTest {
         int input = 0;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("FizzBuzz", result);
@@ -172,7 +167,7 @@ class FizzBuzzTest {
         int input = -3;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("Fizz", result);
@@ -184,7 +179,7 @@ class FizzBuzzTest {
         int input = -5;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("Buzz", result);
@@ -196,7 +191,7 @@ class FizzBuzzTest {
         int input = 1000;
 
         // Act
-        String result = FizzBuzz.fizzbuzz(input);
+        String result = this.fizzBuzz.fizzbuzz(input);
 
         // Assert
         assertEquals("Buzz", result);
