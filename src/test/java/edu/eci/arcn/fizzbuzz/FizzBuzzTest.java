@@ -1,16 +1,15 @@
 package edu.eci.arcn.fizzbuzz;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.List;
 import org.junit.jupiter.api.Test;
 
 /**
- * Unit tests for this.java file following TDD (Red-Green-Refactor) cycle.
- *
- * Methodology: Tests are written BEFORE the implementation.
- * Each test drives the minimum necessary production code.
+ * Unit tests for FizzBuzz following TDD (Red-Green-Refactor) cycle.
  *
  * @author Jesús Pinzón
- * @version 1.0
+ * @version 1.5
  * @since 2026-02-21
  */
 class FizzBuzzTest {
@@ -18,182 +17,46 @@ class FizzBuzzTest {
     private final FizzBuzz fizzBuzz = new FizzBuzz();
 
     @Test
-    void testFizzBuzzShouldReturnNumberFor1() {
+    void testFizzBuzzShouldReturnNumberAsStringForNonMultiples() {
         // Arrange
-        int input = 1;
+        List<Integer> inputs = List.of(1, 2, 4, 7, 11, 13);
 
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("1", result);
+        // Act & Assert
+        for (int input : inputs) {
+            assertEquals(String.valueOf(input), this.fizzBuzz.fizzbuzz(input));
+        }
     }
 
     @Test
-    void testFizzBuzzShouldReturnNumberFor2() {
+    void testFizzBuzzShouldReturnFizzForMultiplesOf3() {
         // Arrange
-        int input = 2;
+        List<Integer> inputs = List.of(3, 6, 9, -3);
 
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("2", result);
+        // Act & Assert
+        for (int input : inputs) {
+            assertEquals("Fizz", this.fizzBuzz.fizzbuzz(input));
+        }
     }
 
     @Test
-    void testFizzBuzzShouldReturnNumberFor7() {
+    void testFizzBuzzShouldReturnBuzzForMultiplesOf5() {
         // Arrange
-        int input = 7;
+        List<Integer> inputs = List.of(5, 25, 1000, -5);
 
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("7", result);
+        // Act & Assert
+        for (int input : inputs) {
+            assertEquals("Buzz", this.fizzBuzz.fizzbuzz(input));
+        }
     }
 
     @Test
-    void testFizzBuzzShouldReturnFizzForMultipleOf3() {
+    void testFizzBuzzShouldReturnFizzBuzzForMultiplesOf3And5() {
         // Arrange
-        int input = 3;
+        List<Integer> inputs = List.of(0, 15, 30, 45, -15);
 
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("Fizz", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldReturnFizzFor9() {
-        // Arrange
-        int input = 9;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("Fizz", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldNotReturnFizzForNonMultipleOf3() {
-        // Arrange
-        int input = 4;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("4", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldReturnBuzzForMultipleOf5() {
-        // Arrange
-        int input = 5;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("Buzz", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldReturnBuzzFor25() {
-        // Arrange
-        int input = 25;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("Buzz", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldNotReturnBuzzForNonMultipleOf5() {
-        // Arrange
-        int input = 7;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("7", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldReturnFizzBuzzForMultipleOf15() {
-        // Arrange
-        int input = 15;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("FizzBuzz", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldReturnFizzBuzzFor30() {
-        // Arrange
-        int input = 30;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("FizzBuzz", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldReturnFizzBuzzFor0() {
-        // Arrange
-        int input = 0;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("FizzBuzz", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldReturnFizzForNegativeMultipleOf3() {
-        // Arrange
-        int input = -3;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("Fizz", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldReturnBuzzForNegativeMultipleOf5() {
-        // Arrange
-        int input = -5;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("Buzz", result);
-    }
-
-    @Test
-    void testFizzBuzzShouldReturnBuzzFor1000() {
-        // Arrange
-        int input = 1000;
-
-        // Act
-        String result = this.fizzBuzz.fizzbuzz(input);
-
-        // Assert
-        assertEquals("Buzz", result);
+        // Act & Assert
+        for (int input : inputs) {
+            assertEquals("FizzBuzz", this.fizzBuzz.fizzbuzz(input));
+        }
     }
 }
