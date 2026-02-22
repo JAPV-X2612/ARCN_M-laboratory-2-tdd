@@ -1,0 +1,37 @@
+{
+  "name": "Java TDD Laboratory",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "installMaven": "true"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "vscjava.vscode-java-test",
+        "redhat.java",
+        "vmware.vscode-boot-dev-pack"
+      ],
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.server.launchMode": "Standard",
+        "maven.executable.path": "/usr/bin/mvn"
+      }
+    }
+  },
+
+  "postCreateCommand": "mvn clean install",
+
+  "forwardPorts": [],
+
+  "remoteUser": "vscode"
+}
