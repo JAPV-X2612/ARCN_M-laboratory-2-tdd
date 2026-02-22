@@ -254,13 +254,13 @@ The implementation above already satisfies **clean code** standards — no refac
 
 All **4 unit tests** executed successfully with **0 failures, 0 errors**, and **0 skipped** after applying TDD:
 
-<img src="assets/images/01-unit-tests-execution.png" alt="Unit Tests Execution" width="70%">
+<img src="assets/images/01-unit-tests-execution.png" alt="Unit Tests Execution" width="80%">
 
 ### JaCoCo Coverage Report
 
 The project achieved **100% line coverage** and **100% branch coverage** — well above the enforced minimum of <u>85%</u>:
 
-<img src="assets/images/02-jacoco-unit-test-coverage-report.png" alt="JaCoCo Coverage Report" width="70%">
+<img src="assets/images/02-jacoco-unit-test-coverage-report.png" alt="JaCoCo Coverage Report">
 
 | Metric | Covered | Total | Coverage |
 |--------|---------|-------|----------|
