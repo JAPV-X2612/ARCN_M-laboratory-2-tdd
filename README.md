@@ -305,6 +305,12 @@ jobs:
 
 > The `deploy` job only executes on direct pushes to `main`, never on pull requests.
 
+### Pipeline Execution Evidence
+
+The following screenshot shows the first successful pipeline run (`#1`) triggered by a push to `main`, completing all three jobs in <u>58 seconds</u>:
+
+<img src="assets/images/03-ci-cd-pipeline-execution.png" alt="CI/CD Pipeline Execution" width="80%">
+
 ---
 
 ## 🚀 **Installation and Usage**
