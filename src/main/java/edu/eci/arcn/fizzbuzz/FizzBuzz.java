@@ -6,9 +6,9 @@ package edu.eci.arcn.fizzbuzz;
  *
  * Rules:
  *
- *   Multiple of 3 AND 5 → "FizzBuzz"
  *   Multiple of 3 only  → "Fizz"
  *   Multiple of 5 only  → "Buzz"
+ *   Multiple of 3 AND 5 → "FizzBuzz"
  *   Otherwise           → number as string
  *
  * @author Jesús Pinzón
